@@ -1,0 +1,24 @@
+{
+  "name": "firespread",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config=webpack.config.js --open",
+    "build": "webpack --config=webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "three": "^0.134.0",
+    "webpack": "^5.64.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0",
+    "webpack-glsl-loader": "^1.0.1"
+  },
+  "devDependencies": {
+    "dat.gui": "^0.7.7",
+    "raw-loader": "^4.0.2"
+  }
+}
