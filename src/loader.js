@@ -43,7 +43,7 @@ class AssetsLoader {
         app.mdtData = this.loadASC( data, 6 );
 
         for ( let i = 0; i < 400 * 400; i++ ) {
-          app.terrainGeometry.attributes.position.array[ i * 3 + 2 ] = ( app.mdtData[ i ] / 4000. ) - 1;
+          app.terrainGeometry.attributes.position.array[ i * 3 + 2 ] = ( app.mdtData[ i ] / 5000. ) - 1;
         }
 
         resolve( );

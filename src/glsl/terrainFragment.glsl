@@ -20,14 +20,11 @@ void main(void)
   pct.x = smoothstep(1., 0., pow(fire.x, 5.));
   pct.y = cos(fire.x*3.1415*2.1)/2. + 0.5;
 
-  float mixer = (0.01, 1., fire.x); 
+  float mixer = (0.0001, 1., fire.x); 
 
   vec3 color = mix(colorA, colorB, pct);
 
-  vec3 final = mix(o.rgb, color, mixer);
+  vec3 final = mix(o.rgb, color, mixer * 0.7);
 
-//  gl_FragColor = vec4( fire.r, fire.g, fire.b, 1.0 );
-//  gl_FragColor = ((1. - 0.2) * fire.g + 0.2) * o;
-//  gl_FragColor = vec4(color.r, color.g, o.b, 1);
   gl_FragColor = vec4(final, 1.);
 }

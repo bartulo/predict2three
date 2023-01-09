@@ -11,20 +11,16 @@ import {
   RedFormat,
   FloatType,
   RGBAFormat,
-  Vector2,
-  Raycaster,
   Clock,
   NearestFilter,
 } from 'three';
 
 import { OrbitControlsMod } from './OrbitControlsMod';
-import Stats from 'three/examples/jsm/libs/stats.module';
-import { GUI } from 'dat.gui';
 
 class App {
 
   constructor () {
-    this.camera = new PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 300 );
+    this.camera = new PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 300 );
     this.camera.position.set( 0, 5, 0);
     this.orthoCamera = new OrthographicCamera( -128, 128, 128, -128, .1, 1000 );
     this.orthoCamera.position.z = 5;
@@ -56,14 +52,13 @@ class App {
     // FIRESPREAD
     //
     
-    console.log(this.rosData);
     window.addEventListener('resize', this.onWindowResize.bind( this ), false );
 
     const vShader = require('./glsl/vertex.glsl');
     const fShader = require('./glsl/fragment.glsl');
 
     const mdtDataTexture = new DataTexture( this.mdtData, 400, 400, RedFormat, FloatType );
-    const rosDataTexture = new DataTexture( this.rosData, 200, 200, RedFormat, FloatType );
+    const rosDataTexture = new DataTexture( this.rosData, 600, 600, RedFormat, FloatType );
     const fireDataTexture = new DataTexture( this.fireData, 256, 256, RGBAFormat );
     mdtDataTexture.flipY = true;
     rosDataTexture.flipY = true;
