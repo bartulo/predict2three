@@ -16,9 +16,9 @@ Si prefieres puedes ver una [demo](http://94.23.199.177/predict2threejs/)
 
 #### Para moverse por el escenario:
 
-<kbd>SCROLL</kbd> Zoom in / Zoom out
-<kbd>L-Click</kbd> + <kbd>Mover ratón</kbd> Girar cámara
-<kbd>R-Click</kbd> + <kbd>Mover ratón</kbd> Pan cámara
+<kbd>SCROLL</kbd> Zoom in / Zoom out  
+<kbd>L-Click</kbd> + <kbd>Mover ratón</kbd> Girar cámara  
+<kbd>R-Click</kbd> + <kbd>Mover ratón</kbd> Pan cámara  
 
 #### Para iniciar un fuego:
 
